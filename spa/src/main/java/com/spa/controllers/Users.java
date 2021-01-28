@@ -45,11 +45,10 @@ public class Users {
         }
         System.out.println(user.getId());
         userService.saveWithUserRole(user);
-        System.out.println(user.getId());
-        if (user.getId()==15) {
+        if (user.getId()==16) {
         	userService.saveUserWithAdminRole(user);
 		}
-        return "redirect:/login";
+        return "redirect:/";
     }
     
     @RequestMapping("/admin")

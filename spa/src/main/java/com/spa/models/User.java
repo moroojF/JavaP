@@ -86,7 +86,14 @@ public class User {
     public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
-    
+    public Boolean isAdmin() {
+		for(Role u : roles) {
+			if(u.getName().equals("ROLE_ADMIN")) {
+				return true;
+			}
+		}
+		return false;
+	}
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();
